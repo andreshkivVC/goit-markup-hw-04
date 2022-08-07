@@ -30,6 +30,7 @@ body {
 
 .link {
 	text-decoration: none;
+	display: block;
 }
 .container {
 	width: 1200px;
@@ -58,7 +59,6 @@ body {
 
 .header {
 	border-bottom: 1px solid silver;
-	max-width: 1600px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -152,6 +152,7 @@ body {
 	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 		url(../images/hero.jpg);
 	text-align: center;
+	background-size: auto;
 	padding-top: 200px;
 	padding-bottom: 200px;
 	max-width: 1600px;
@@ -180,11 +181,13 @@ body {
 	align-items: center;
 	text-align: center;
 	letter-spacing: 0.06em;
-	border-radius: 4px;
 	background: var(--main--title--black);
 	color: var(--item--color--white);
 	cursor: pointer;
 	border: none;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	padding: 10px 32px;
 }
 .essential-btn :focus,
 .essential-btn :hover {
@@ -192,7 +195,6 @@ body {
 }
 
 /*-----content-----*/
-
 .content-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -404,7 +406,6 @@ img {
 	background-color: #2f303a;
 	padding-top: 60px;
 	padding-bottom: 60px;
-	max-width: 1600px;
 	margin: 0 auto;
 }
 .info-item {
@@ -435,13 +436,11 @@ img {
 
 /* ---- -footer-continer------- */
 
-.containers {
-	width: 1200px;
-	padding-left: 15px;
-	padding-right: 15px;
+.hvdvome {
 	margin: 0 auto;
 	display: flex;
 	gap: 70px;
+	align-items: baseline;
 }
 
 .footer-title {
@@ -484,8 +483,6 @@ img {
 	fill: #ffffff;
 }
 
-
-
 /* --------Портфоліо---------- */
 
 .potfolio-title {
@@ -518,11 +515,8 @@ img {
 	background-color: #f5f4fa;
 	border: none;
 	cursor: pointer;
-}
-.filter-btn:hover,
-.filter-btn:focus {
-	color: var(--item--color--white);
-	background-color: var(--main--title--black);
+	border-radius: 4px;
+	padding: 6px 22px;
 }
 
 .work-item {
@@ -534,6 +528,11 @@ img {
 	font-size: 18px;
 	line-height: 2;
 	letter-spacing: 0.06em;
+}
+
+.work-link:focus {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+		1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .work-item.work-list:nth-last-child(-n + 3) {
@@ -575,4 +574,12 @@ img {
 
 .info-list .info-item:not(:last-child) {
 	margin-bottom: 9px;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+	color: var(--item--color--white);
+	background-color: var(--main--title--black);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+		0px 2px 2px rgba(0, 0, 0, 0.12);
 }
